@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from .models import StudentProfile, Project
+from django.contrib import auth
+from django.contrib.auth.models import User
 
 # Create your views here.
-def student_profile(request,pk):
-    student = get_object_or_404(User, id=pk)
-    profile = get_object_or_404(StudentProfile, id=pk, user_id=user.id)
-    return render(request, 'dev_connect/profile.html', {'user': user, 'profile': profile})
+def student_profile(request, username):
+    student = User.objects.filter(username=username)
+
+    return render(request, 'dev_connect/profile.html', {'student': student})
+
+def all_profiles(request):
+    profiles = StudentProfile.objects.all()
+    return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles})
