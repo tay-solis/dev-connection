@@ -14,24 +14,25 @@ def register(request):
     password = request.POST['password']
     password2 = request.POST['password2']
 
-    #####DO PASSWORDS MATCH?#########
+    ######DO PASSWORDS MATCH?#########
     if password == password2:
-      #####DOES USERNAME EXIST ALREADY?#######
+    #####DOES USERNAME EXIST ALREADY?#######
       if User.objects.filter(username=username).exists():
         return render(request, 'accounts/register.html', {'error': 'Username already registered.  Please choose a different username.'})
       else:
         #####CHECK FOR EMAIL######
         if User.objects.filter(email=email).exists():
           return render(request, 'accounts/register.html', {'error': 'That email has already been registered.'})
-        ########REGISTER USER#######
+    #########REGISTER USER#######
         else:
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
-          return redirect(request, 'login')
+          return redirect('login')
     else:
       return render(request, 'accounts/register.html', {'error': 'Passwords do not match.'})
   else:
     return render(request, 'accounts/register.html')
+
 
 def login(request):
   if request.method == 'POST':
@@ -39,10 +40,9 @@ def login(request):
     password = request.POST['password']
 
     user = auth.authenticate(username=username, password=password)
-
     if user is not None:
       auth.login(request, user)
-      return redirect('contacts')
+      return redirect('home')
     else:
       return render(request, 'accounts/login.html', {'error': 'Invalid credentials.'})
   else:
@@ -51,3 +51,9 @@ def login(request):
 def logout(request):
   auth.logout(request)
   return redirect('home')
+
+
+
+
+
+
