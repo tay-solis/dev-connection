@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Developer Connection</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+
+      </ul>
+    </nav>
+
+      {% block content %}
+      {% endblock %}
+    <aside>
+      <ul>
+        <li><a href="#">Student Name</a></li>
+      </ul>
+    </aside>
+
+  </body>
+</html>
