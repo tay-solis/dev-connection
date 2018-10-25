@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+  {% for profile in profiles %}
+  <section class="profile">
+    <h1>{{profile.tag_line}}</h1>
+  </section>
+  {% endfor %}
+</main>
+{% endblock %}
