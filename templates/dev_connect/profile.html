@@ -2,11 +2,47 @@
 
 {% block content %}
 <main>
-  <section class="intro">
+  <section class="title">
     <div>
       <h1>{{ user.first_name}} {{user.last_name}}</h1>
-      <h2>{{profile.tag_line}}</h2>
+      <h2>{{ profile.tag_line }}</h2>
     </div>
+  </section>
+  <section class="about">
+    <img src="{{profile.image}}" />
+    <div class="about-text">
+      <p>
+        My favorite snack is <span class="about-answer">{{profile.favorite_snack}}</span>
+      </p>
+      <p>
+        My dream job is <span class="about-answer">{{profile.dream_job}}</span>
+      </p>
+      <p>
+        I'm excited about <span class="about-answer">{{profile.favorite_tech}}</span>
+      </p>
+    </div>
+    <div class="skills">
+      <p>
+        {{profile.skills}}
+      </p>
+    </div>
+  </section>
+  <section class="projects">
+    {% for project in projects %}
+      <div class="project">
+        <h3>{{project.title}}</h3>
+        <img src="{{project.screenshot}}" />
+        <p>
+          {{project.description}}
+        </p>
+        <p>
+          {{project.tech}}
+        </p>
+        <p>
+          {{project.teammates}}
+        </p>
+      </div>
+    {% endfor %}
   </section>
 </main>
 {% endblock %}
