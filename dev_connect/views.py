@@ -17,4 +17,4 @@ def project_details(request, username, title):
 
 def all_profiles(request):
     profiles = StudentProfile.objects.all()
-return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles})
+    return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles})
