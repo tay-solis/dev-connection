@@ -4,7 +4,7 @@
 <main>
   <section class="title">
     <div>
-      <h1>{{ user.first_name}} {{user.last_name}}</h1>
+      <h1>{{ student.first_name}} {{student.last_name}}</h1>
       <h2>{{ profile.tag_line }}</h2>
     </div>
   </section>
@@ -30,7 +30,7 @@
   <section class="projects">
     {% for project in projects %}
       <div class="project">
-        <h3>{{project.title}}</h3>
+        <a href="{%url 'project_details' username=student.username title=project.title %}"><h3>{{project.title}}</h3></a>
         <img src="{{project.screenshot}}" />
         <p>
           {{project.description}}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<header style="background-image: url({{project.screenshot}})">
+  <h1>{{project.title}}</h1>
+</header>
+<main>
+  <p>
+    {{project.description}}
+  </p>
+  <p>
+    By {{project.teammates}}
+  </p>
+  <h3>
+    Tech Used:
+  </h3>
+  <p>
+    {{project.tech}}
+  </p>
+</main>
+{% endblock %}
