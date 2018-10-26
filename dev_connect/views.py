@@ -12,7 +12,7 @@ def student_profile(request, username):
 
 def project_details(request, username, title):
     student = get_object_or_404(User, username=username)
-    project = Project.objects.filter(title=title)
+    project = get_object_or_404(Project, title=title)
     return render(request, 'dev_connect/project_details.html', {'student': student, 'project': project})
 
 def all_profiles(request):
