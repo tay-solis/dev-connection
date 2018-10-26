@@ -1,0 +1,146 @@
+/* ================================================================*/
+        /*LANDING PAGE STYLES*/
+/* ================================================================*/
+
+/* ====== BASIC TEXT STYLES ======*/
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+/* ====== END BASIC TEXT STYLES ======*/
+
+/* ====== LANDING PAGE LAYOUT ======*/
+.landing {
+    font-family: 'Nunito', sans-serif;
+    background-image: url('/static/images/bg_1200.jpg');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #325170;
+}
+
+.landing header  {
+    margin: 10% auto 0 auto;
+    padding: 0 auto;
+}
+
+.landing main {
+    margin: 0px auto 0px auto;
+    padding: 0 auto;
+}
+
+.landing footer {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 0;
+    /*position: absolute;
+    bottom: 0;
+    left: auto;*/
+}
+
+.landing h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.lighter {
+    font-weight: 700;
+    font-size: 80%;
+}
+
+.landing h6 {
+    font-size: .85em;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0 auto;
+    font-weight: lighter;
+}
+
+.landing .btn-landing {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgba(204,204,204, 0.35);
+    border-radius: 35px;
+    min-height: 42px;
+    margin: 14% 0 10% 0;
+    padding: 8px 30px 8px 30px;
+    border: 3px solid rgba(204,204,204, 0.65);
+    transition: all .35s ease-in-out;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.landing .btn-landing:hover {
+    background-color: rgba(204,204,204, 0.05);
+    color: rgba(204,204,204, 0.85);
+    border: 3px solid teal;
+    /*filter: drop-shadow(0px 1px 3px rgba(204,204,204, 0.25));*/
+}
+
+.landing .btn-landing:active {
+    color: rgba(204,204,204, 0.95);
+    border: 3px solid rgba(204,204,204, 0.45);
+}
+
+
+@media screen and (max-width: 1045px) {
+    .landing {
+        background-image: url('/static/images/bg_1045.jpg');
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .landing {
+        background-image: url('/static/images/bg_560.jpg');
+        margin: 30px;
+    }
+    .landing header {
+        margin: 6% auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .landing {
+        background-image: url('/static/images/bg_380.jpg');
+        margin: 15px;
+    }
+    img {
+        width: 75%;
+        margin-top: 25px;
+    }
+    .landing header {
+        margin: 6% auto 0 auto;
+    }
+
+}
+/* ================================================================*/
+        /* END LANDING PAGE STYLES*/
+/* ================================================================*/
+
+
+
+
+
+
+

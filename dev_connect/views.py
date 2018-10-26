@@ -1,14 +1,14 @@
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+# from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.contrib import auth
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DetailView
-)
+# from django.views.generic import (
+#     ListView,
+#     DetailView,
+#     CreateView,
+#     UpdateView,
+#     DetailView
+# )
 from .models import StudentProfile, Project
 
 
@@ -21,12 +21,12 @@ def all_profiles(request):
     profiles = StudentProfile.objects.all()
     return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles})
 
-class PostListView(ListView):
-    model = StudentProfile
-    template_name = 'dev_connecct/profile.html' #<app>/<model>_<viewtype>.html
-    context_object_name = 'profile'
-    oredering = ['-date_posted']
-    paginate_by = 5
+# class PostListView(ListView):
+#     model = StudentProfile
+#     template_name = 'dev_connecct/profile.html' #<app>/<model>_<viewtype>.html
+#     context_object_name = 'profile'
+#     oredering = ['-date_posted']
+#     paginate_by = 5
 
 # class UserPostListView(Listview):
 #     model = StudentProfile
@@ -62,12 +62,12 @@ class PostListView(ListView):
 
 #     def test_func(self):
 #         post = self.get_object()
-        if self.request.user == post.author:
-            return True
-        return False
+#         if self.request.user == post.author:
+#             return True
+#         return False
 
-def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
+# def about(request):
+#     return render(request, 'blog/about.html', {'title': 'About'})
 
 
 
