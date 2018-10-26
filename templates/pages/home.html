@@ -1,7 +1,47 @@
-{% extends 'base.html' %}
-
 {% block content %}
-  <img src="#" />
-  <h1>We are WDI-48, San Francisco</h1>
-  <a href="{% url 'about' %}"><button>Check Us Out</button></a>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Connection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+    <!-- Materialize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--custom fonts -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body class="landing">
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+      {% endif %}
+    </ul>
+</nav>
+
+<header>
+    <img src=" {% static 'images/ga_logo.png' %}" alt="ga_logo" class="ga-logo" />
+</header>
+
+    <main>
+        <h1>We are WDI-48: <span class="lighter">San Francisco, CA</span></h1>
+    </main>
+
+    <button class="btn-landing">Check us out!</button>
+
+<footer>
+    <h6>&copy; 2018 Tay J. Solis, Andrew Foster, Paul Mourraille</h6>
+</footer>
+<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
 {% endblock %}
