@@ -1,1 +1,1 @@
-web: gunicorn dev-connection.wsgi
+web: gunicorn dev_connect_project.wsgi
