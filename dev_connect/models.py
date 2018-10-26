@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 class StudentProfile(models.Model):
     tag_line= models.CharField(max_length=50)
     location= models.CharField(max_length=50)
+    linkedin_link = models.CharField(max_length=50)
+    github_link = models.CharField(max_length=50)
+    website_link = models.CharField(max_length=50)
     image= models.TextField()
     skills= models.TextField()
     favorite_snack= models.CharField(max_length=50)
@@ -18,6 +21,8 @@ class StudentProfile(models.Model):
 
 class Project(models.Model):
     title= models.CharField(max_length=50)
+    hosted_link = models.CharField(max_length=50)
+    github_link = models.CharField(max_length=50)
     screenshot= models.TextField()
     description= models.TextField()
     tech = models.TextField()
