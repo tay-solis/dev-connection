@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 
 from django.contrib import auth
-
 from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect, Http404
+
 
 
 def register(request):
@@ -27,7 +28,9 @@ def register(request):
         else:
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
-          return redirect('login')
+          new_user = auth.authenticate(username=username,password=password)
+          auth.login(request, user)
+        return HttpResponseRedirect("../../students/profile/add")
     else:
       return render(request, 'accounts/register.html', {'error': 'Passwords do not match.'})
   else:
@@ -51,9 +54,3 @@ def login(request):
 def logout(request):
   auth.logout(request)
   return redirect('home')
-
-
-
-
-
-
