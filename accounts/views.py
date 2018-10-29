@@ -4,6 +4,8 @@ from django.contrib import auth
 
 from django.contrib.auth.models import User
 
+from dev_connect.models import StudentProfile
+
 
 def register(request):
   if request.method == 'POST':
@@ -27,6 +29,8 @@ def register(request):
         else:
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
+          profile = StudentProfile.objects.create(user_id=user)
+          profile.save()
           return redirect('login')
     else:
       return render(request, 'accounts/register.html', {'error': 'Passwords do not match.'})
@@ -42,7 +46,7 @@ def login(request):
     user = auth.authenticate(username=username, password=password)
     if user is not None:
       auth.login(request, user)
-      return redirect('home')
+      return redirect('student_profile', username=username)
     else:
       return render(request, 'accounts/login.html', {'error': 'Invalid credentials.'})
   else:
