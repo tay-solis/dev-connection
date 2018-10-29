@@ -4,7 +4,7 @@
 {% include 'partials/nav_bar.html' %}
 
 
-<form method="POST" action="{% url 'add_profile' %}">
+<form method="POST" action="{% url 'student_form' %}">
   {% csrf_token %}
   {{ form.as_p }}
   <input type="submit" placeholder="Submit" />
