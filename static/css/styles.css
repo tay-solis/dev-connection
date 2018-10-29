@@ -1,7 +1,27 @@
+/* ====== COLORS ======*/
+/*
+Dark grey: #444444;
+Blue: #0072bc;
+Drop Shadow: #ABADCC;
+Light Grey: #ccc;
+Teal: teal;
+
+*/
 
 /* ====== GLOBAL ======*/
 body{
   margin: 0;
+}
+
+section{
+  padding-bottom: 3em;
+  border-bottom: 1px solid #444444;
+  margin-top: 3em;
+}
+
+section:first-of-type{
+  padding-bottom: 2em;
+  margin-top: 0;
 }
 
 .content{
@@ -13,6 +33,9 @@ body{
 
 body{
   font-family: 'Nunito', sans-serif;
+}
+i{
+  font-size: 3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -330,24 +353,6 @@ aside{
   z-index: 999;
 }
 
-aside i{
-  font-size: 3em;
-}
-/*
-.open-nav{
-  height: 2em;
-  width:2em;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items:center;
-  background-color: #0072bc;
-  color: #cbd5db;
-  position: absolute;
-  right: 250px;
-  top: 150px;
-} */
-
 
 /* ================================================================*/
         /* CLASS PAGE STYLES*/
@@ -364,7 +369,55 @@ aside i{
         /* PROFILE STYLES*/
 /* ================================================================*/
 
+.about{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+}
+
+.headshot{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.headshot img{
+  max-width: 100%;
+}
+.about-text{
+  width: 65%;
+  padding: 2em;
+}
+
+.links ul{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+}
+.links li{
+  margin: 1em;
+}
+
+.projects{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.project{
+  width: 30%;
+  z-index: 950;
+}
+.project img{
+  max-width: 100%;
+}
 
 /* ================================================================*/
         /* PROJECT STYLES*/
 /* ================================================================*/
+header{
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
