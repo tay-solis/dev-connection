@@ -3,15 +3,15 @@
 {% block content %}
 {% include 'partials/nav_bar.html' %}
 
-<main>
-  <section class="title">
-    <div>
-      <h1>{{ student.first_name}} {{student.last_name}}</h1>
-      <h2>{{ profile.tag_line }}</h2>
+<main class="content">
+  <div class="title">
+    <h1>{{ student.first_name}} {{student.last_name}}</h1>
+    <h2>{{ profile.tag_line }}</h2>
+  </div>
+  <section class="about">    
+    <div class="headshot">
+      <img src="{{profile.image}}" />
     </div>
-  </section>
-  <section class="about">
-    <img src="{{profile.image}}" />
     <div class="about-text">
       <p>
         My favorite snack is <span class="about-answer">{{profile.favorite_snack}}</span>
@@ -22,28 +22,36 @@
       <p>
         I'm excited about <span class="about-answer">{{profile.favorite_tech}}</span>
       </p>
+      <div class="skills">
+        <p>
+          {{profile.skills}}
+        </p>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a href="{{profile.github_link}}"><i class="fab fa-github-square"></i></a></li>
+          <li><a href="{{profile.linkedin_link}}"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="{{profile.website_link}}"><i class="fas fa-globe"></i></a></li>
+        </ul>
+
+      </div>
     </div>
-    <div class="skills">
-      <p>
-        {{profile.skills}}
-      </p>
-    </div>
+
   </section>
   <section class="projects">
     {% for project in projects %}
-      <div class="project">
-        <a href="{%url 'project_details' username=student.username title=project.title %}"><h3>{{project.title}}</h3></a>
-        <img src="{{project.screenshot}}" />
-        <p>
-          {{project.description}}
-        </p>
-        <p>
-          {{project.tech}}
-        </p>
-        <p>
-          {{project.teammates}}
-        </p>
+
+    <div class="card project">
+      <div class="card-image">
+        <img src="{{project.screenshot}}">
       </div>
+      <div class="card-content">
+        <h3>{{project.title}}</h3>
+      </div>
+      <div class="card-action">
+        <a href="{%url 'project_details' username=student.username title=project.title %}">Learn More</a>
+      </div>
+    </div>
     {% endfor %}
   </section>
 </main>
