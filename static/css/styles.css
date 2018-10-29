@@ -1,7 +1,27 @@
+/* ====== COLORS ======*/
+/*
+Dark grey: #444444;
+Blue: #0072bc;
+Drop Shadow: #ABADCC;
+Light Grey: #ccc;
+Teal: teal;
+
+*/
 
 /* ====== GLOBAL ======*/
 body{
   margin: 0;
+}
+
+section{
+  padding-bottom: 3em;
+  border-bottom: 1px solid #444444;
+  margin-top: 3em;
+}
+
+section:first-of-type{
+  padding-bottom: 2em;
+  margin-top: 0;
 }
 
 .content{
@@ -396,3 +416,8 @@ aside{
 /* ================================================================*/
         /* PROJECT STYLES*/
 /* ================================================================*/
+header{
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}

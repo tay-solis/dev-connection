@@ -4,13 +4,11 @@
 {% include 'partials/nav_bar.html' %}
 
 <main class="content">
-  <section class="title">
-    <div>
-      <h1>{{ student.first_name}} {{student.last_name}}</h1>
-      <h2>{{ profile.tag_line }}</h2>
-    </div>
-  </section>
-  <section class="about">
+  <div class="title">
+    <h1>{{ student.first_name}} {{student.last_name}}</h1>
+    <h2>{{ profile.tag_line }}</h2>
+  </div>
+  <section class="about">    
     <div class="headshot">
       <img src="{{profile.image}}" />
     </div>

@@ -3,12 +3,14 @@
 {% include 'partials/nav_bar.html' %}
 
 <header style="background-image: url({{project.screenshot}})">
-  <h1>{{project.title}}</h1>
 </header>
-<main>
-  <p>
-    {{project.description}}
-  </p>
+<main class="content">
+  <section>
+    <h1>{{project.title}}</h1>
+    <p>
+      {{project.description}}
+    </p>
+  </section>
   <p>
     By {{project.teammates}}
   </p>
