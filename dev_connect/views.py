@@ -26,19 +26,18 @@ def all_profiles(request):
     profiles = StudentProfile.objects.all()
     return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles, 'students': students})
 
-<<<<<<< HEAD
-=======
 @login_required
-def add_profile(request):
+def edit_profile(request):
+    student = request.user
+    profile = StudentProfile.objects.get(user_id = request.user)
+    projects = Project.objects.filter(user_id=student.id)
     if request.method == 'POST':
-        username = request.user.username
-        form = StudentProfileForm(request.POST)
+        form = StudentProfileForm(request.POST, instance = profile)
         if form.is_valid():
-            new_profile = form.save(commit=False)
-            new_profile.user_id = request.user
-            new_profile.save()
-            return HttpResponseRedirect('/students/' + request.user.username + '/')
+            edited_profile = form.save()
+            return render(request, 'dev_connect/profile.html', {'student': student, 'profile': profile, 'projects': projects, 'students': students})
     else:
-        form = StudentProfileForm()
-        return render(request, 'dev_connect/addprofile.html', {'form': form})
->>>>>>> 905daa45d1d13cf3e08843063b3a57ddde8767ce
+        form = StudentProfileForm(instance=profile)
+        print(profile)
+        return render(request, 'dev_connect/editprofile.html', {'form': form})
+

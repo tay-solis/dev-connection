@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, Http404
+from dev_connect.models import StudentProfile
 
 
 
@@ -28,9 +29,10 @@ def register(request):
         else:
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
+          profile = StudentProfile.objects.create(user_id=user)
           new_user = auth.authenticate(username=username,password=password)
           auth.login(request, user)
-        return HttpResponseRedirect("../../students/profile/add")
+          return HttpResponseRedirect("../../students/profile/edit")
     else:
       return render(request, 'accounts/register.html', {'error': 'Passwords do not match.'})
   else:
