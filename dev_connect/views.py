@@ -66,4 +66,5 @@ def edit_project(request, title):
             return render(request, 'dev_connect/project_details.html', {'student': student, 'project': project})
     else:
         form = ProjectForm(instance=project)
-return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
+        return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
+
