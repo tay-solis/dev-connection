@@ -1,6 +1,7 @@
 from django.db import models
 # from django.contrib.postgres.fields import ArrayField
 from django.contrib.auth.models import User
+from PIL import Image
 
 
 # Create your models here.
@@ -10,7 +11,7 @@ class StudentProfile(models.Model):
     linkedin_link = models.CharField(max_length=50, blank=True)
     github_link = models.CharField(max_length=50, blank=True)
     website_link = models.CharField(max_length=50, blank=True)
-    image= models.TextField(blank=True)
+    image= models.ImageField(default='default.jpg', upload_to='profile_pics', blank=True)
     skills= models.TextField(blank=True)
     favorite_snack= models.CharField(max_length=50, blank=True)
     dream_job= models.TextField(blank=True)
