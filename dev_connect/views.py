@@ -24,9 +24,7 @@ def project_details(request, username, title):
 
 def all_profiles(request):
     profiles = StudentProfile.objects.all()
-
-    return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles, 'students': students})
-
+    return render(request, 'dev_connect/allprofiles.html', {'profiles': profiles})
 
 @login_required
 def edit_profile(request):
@@ -42,7 +40,6 @@ def edit_profile(request):
         form = StudentProfileForm(instance=profile)
         print(profile)
         return render(request, 'dev_connect/editprofile.html', {'form': form})
-
 
 @login_required
 def add_project(request):
@@ -69,5 +66,4 @@ def edit_project(request, title):
             return render(request, 'dev_connect/project_details.html', {'student': student, 'project': project})
     else:
         form = ProjectForm(instance=project)
-        return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
-
+return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
