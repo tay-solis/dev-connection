@@ -2,7 +2,7 @@
 {% block content %}
 {% include 'partials/nav_bar.html' %}
 
-<header style="background-image: url({{project.screenshot}})">
+<header style="background-image: url({{ project.screenshot.url }})">
 </header>
 <main class="content">
   {% if student.username == user.username and user.is_authenticated %}
