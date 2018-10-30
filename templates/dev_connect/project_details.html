@@ -5,6 +5,9 @@
 <header style="background-image: url({{project.screenshot}})">
 </header>
 <main class="content">
+  {% if student.username == user.username and user.is_authenticated %}
+  <a href="{% url 'edit_project' title=project.title%}"><button>Edit This Project</button></a>
+  {% endif %}
   <section>
     <h1>{{project.title}}</h1>
     <p>

@@ -4,10 +4,13 @@
    <ul>
     <li><a href="{% url 'about' %}">Home</a></li>
   {% if user.is_authenticated %}
+    <li>Hello, {{ user.first_name }}</li>
+    <li><a href="{% url 'student_profile' username=user.username%}">My Profile</a></li>
+    <li><a href="{% url 'add_project'%}">Add a Project</a></li>
     <li><a href="{% url 'logout' %}">Logout</a></li>
   {% else %}
     <li><a href="{% url 'login' %}">Login</a></li>
-    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'register' %}">New Student?</a></li>
   {% endif %}
   </ul>
 </nav>

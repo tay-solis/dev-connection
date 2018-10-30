@@ -24,6 +24,10 @@ section:first-of-type{
   margin-top: 0;
 }
 
+section img{
+  max-width: 100%;
+}
+
 .content{
   margin-top: 7em;
   padding: 0 5em;
@@ -118,6 +122,7 @@ ul {
 form {
   text-align: center;
   margin: 30px auto 20px auto;
+  padding: 5em;
 }
 
 input {
@@ -199,8 +204,8 @@ input:focus {
     background-color: #325170;
 }
 
-.landing header  {
-    margin: 10% auto 0 auto;
+.landing img {
+    margin: 17% auto 0 auto;
     padding: 0 auto;
 }
 
@@ -348,15 +353,49 @@ nav a:hover{
 
 aside{
   position: fixed;
-  top: 50%;
-  left: .5em;
+  height: auto;
+  top: 30%;
   z-index: 999;
 }
 
+.tab{
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  max-width: 3em;
+  padding-top: 1.5em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  height: auto;
+  background-color: #0072bc;
+  text-align: center;
+  border-radius: 0 6px 6px 0;
+}
+
+.tab a h2{
+  margin: 0;
+  line-height: 1.1em;
+  color: #FFF;
+}
+
+.tab i {
+  color: #FFF;
+}
+
+#slide-out a{
+  font-size: 2em;
+}
+
+#slide-out h2{
+  text-align: center;
+  margin: 1em auto;
+}
 
 /* ================================================================*/
         /* CLASS PAGE STYLES*/
 /* ================================================================*/
+
+
 
 .class-info{
   /* display: flex;
@@ -364,6 +403,48 @@ aside{
   justify-content: space-between;
   align-items: flex-end; */
 }
+
+.instructor-blurbs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blurb{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructor-img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #444444;
+}
+
+.instructor-img img{
+  height: inherit;
+
+}
+
+.class{
+  padding: 1em 5em;
+}
+
+.class section h2{
+  text-align: center;
+}
+
+.title{
+  text-align: left;
+}
+
+
 
 /* ================================================================*/
         /* PROFILE STYLES*/
