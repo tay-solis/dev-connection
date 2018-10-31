@@ -4,7 +4,7 @@
 {% include 'partials/nav_bar.html' %}
 
 
-<form method="POST" action="{% url 'edit_profile' %}">
+<form enctype="multipart/form-data" method="POST" action="{% url 'edit_profile' %}">
   {% csrf_token %}
   {{ form.as_p }}
   <input type="submit" placeholder="Submit" />
