@@ -1,6 +1,9 @@
 /* ====== COLORS ======*/
 /*
 Dark grey: #444444;
+.grey{
+ color: #444444;
+ }
 Blue: #0072bc;
 Drop Shadow: #ABADCC;
 Light Grey: #ccc;
@@ -436,9 +439,9 @@ nav .hmBut:hover{
   }
 
   .glyphicon-home{
-    color:white; 
-    font-size:1.5em; 
-    margin-top:5px; 
+    color:white;
+    font-size:1.5em;
+    margin-top:5px;
     margin:0 auto;
   }
 
@@ -570,7 +573,7 @@ aside{
     align-items: center;
   }
 
- 
+
 }
 
 /* ================================================================*/
@@ -580,10 +583,38 @@ aside{
 .about{
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10%;
 }
 
-.headshot{
+.about-me h2 {
+  text-align: center;
+}
+
+.student-title{
+  margin-left: 20px;
+}
+
+.ccc {
+ color: #ccc;
+ font-size: 25px;
+ background-color: none;
+ }
+
+ .quotes {
+  font-weight: 800;
+  font-size: 200%;
+ }
+
+ .headshot {
+  width: 300px;
+  padding: 0 30px 30px 0;
+ }
+
+
+
+/*.headshot{
   width: 300px;
   height: 300px;
   overflow: hidden;
@@ -591,10 +622,14 @@ aside{
 }
 .headshot img{
   max-width: 100%;
-}
+  overflow: hidden;
+  min-width: 300px;
+  min-height: 100%;
+}*/
 .about-text{
-  width: 65%;
-  padding: 2em;
+  width: 100%;
+  margin-left: 20px;
+  padding: .75em 2em;
 }
 
 .links ul{
@@ -605,6 +640,11 @@ aside{
 }
 .links li{
   margin: 1em;
+  transition: color .6s ease-in-out;
+}
+
+.links i:hover {
+  color: #000;
 }
 
 .projects{
@@ -619,6 +659,20 @@ aside{
 }
 .project img{
   max-width: 100%;
+}
+
+.about .btn {
+  background-color: #ccc;
+  margin-top: 30px;
+  transition: color .5s ease-in-out;
+}
+
+.about .btn:hover {
+  background-color: #000;
+}
+
+.about .btn:active {
+  background-color: teal;
 }
 
 /* ================================================================*/
@@ -636,4 +690,28 @@ header{
 
 .show {
   display: block;
+}
+
+ @media screen and (max-width: 380px){
+.headshot {
+  width: 100%;
+  padding: 0 0px 30px 0;
+ }
+.about-text{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
+  font-size: 90%;
+}
+
+.student-title{
+  margin: 0px 0 0 0;
+}
+
+.about {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  }
 }
