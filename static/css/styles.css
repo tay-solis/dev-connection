@@ -1,15 +1,29 @@
 /* ====== COLORS ======*/
 /*
-Dark grey: #444444;
-.grey{
- color: #444444;
- }
+Red: #EB3C27
+Off White: #FDFCFC
+Dark Blue #29375C
+Dark grey: #5C708;
 Blue: #0072bc;
-Drop Shadow: #ABADCC;
-Light Grey: #ccc;
-Teal: teal;
+Grey: #B8B8B8;
+Teal: #54BAB4;
+Dark Grey: #282623;
 
 */
+/*====COLOR HANDLING===========*/
+
+.dark-grey{
+  color: #282623;
+}
+.blue {
+  background-color: #B8B8B8;
+}
+
+.greyblue {
+  background-color: #B8B8B8;
+}
+
+
 
 /* ====== GLOBAL ======*/
 body{
@@ -18,8 +32,7 @@ body{
 
 section{
   padding-bottom: 3em;
-  border-bottom: 1px solid #444444;
-  margin-top: 3em;
+  border-bottom: 1px solid #B8B8B8;
 }
 
 section:first-of-type{
@@ -41,43 +54,39 @@ section img{
 body{
   /*font-family: 'Nunito', sans-serif;*/
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 i{
   font-size: 3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #54BAB4;
+  font-weight: normal;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: 800;
   margin: 0;
   margin-bottom: 10px;
+  font-size: 3em;
 }
 
 h2 {
-  font-size: 29px;
-  font-weight: 800;
   margin: 0;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 400;
 }
 
 
 h4 {
-  font-size: 20px;
   letter-spacing: -.01em;
   background-color: #0072bc;
   width: 100%;
   color: #fff;
   padding: 20px 0 20px 40px;
-  font-weight: 800;
 }
 
 h5{
@@ -91,9 +100,9 @@ h6{
 }
 
 h6 a {
-  color: #0072bc;
+  color: #EB3C27;
   text-decoration: none;
-  border-bottom: 1px solid #0072bc;
+  border-bottom: 1px solid #EB3C27
   transition: color .5s ease-in-out;
 
 }
@@ -104,12 +113,12 @@ a:hover {
 
 .error {
   font-size: 14px;
-  color: red;
+  color: #EB3C27
   margin-top: -15px;
 }
 
 hr {
-  border-bottom: 1px solid #0072bc;
+  border-bottom: 1px solid #B8B8B8;
   text-align: center;
   padding: 0 auto;
   /*margin: 0px 0 15px 0;*/
@@ -138,19 +147,19 @@ input {
   border: none;
   border-radius: 4px;
   min-height: 42px;
-  border: 1px #0072bc solid;
+  border: 1px #54BAB4 solid;
   background-color: rgb(204, 204, 204, .2);
   transition: all .5s ease-in-out;
 }
 
 input:focus {
   background-color: rgb(255, 255, 255, .95);
-  border: 2px #0072bc solid;
+  border: 2px #54BAB4 solid;
   filter: drop-shadow(0px 3px 3px #ABADCC);
 }
 
 .border {
-  border: 1px #0072bc solid;
+  border: 1px #54BAB4 solid;
 }
 
 .indicates-required {
@@ -166,7 +175,7 @@ input:focus {
   width: 100%;
   font-size: 16px;
   border-radius: 4px;
-  background-color: #0072bc;
+  background-color: #B8B8B8;
   transition: color .75s ease-in-out;
   /*height: 42px;*/
   /*min-width: 250px;*/
@@ -181,15 +190,7 @@ input:focus {
 }
 
 
-/*====COLOR HANDLING===========*/
 
-.blue {
-  background-color: #0072bc;
-}
-
-.greyblue {
-  background-color: #ABADCC;
-}
 
 
 /* ================================================================*/
@@ -318,7 +319,7 @@ input:focus {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #0072bc;
+  background-color: #54BAB4;
   padding: .5em;
 }
 
@@ -337,8 +338,7 @@ nav li a{
 }
 
 .greeting{
-  /*margin-right: 30px;*/
-  border-right: 2px solid #e3f4ff;
+
   padding-right: 25px;
 }
 
@@ -356,11 +356,10 @@ nav li a{
 
 nav .hmBut:hover{
   box-sizing: border-box;
-  color: #f4eb42;
 }
 
 .bg-steel {
-  background-color: #0072bc;
+  background-color: #54BAB4;
 }
 
 
@@ -380,91 +379,6 @@ nav .hmBut:hover{
 
 }
 
-@media screen and (max-width: 770px) {
-
-  .menu {
-    align-items: unset;
-    display: none;
-  }
-
-  /*.hamburger-icon{
-    display: block;
-    background: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 45px;
-    padding: 5px 15px 0px 15px;
-    color: #999;
-    border: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    z-index: 10000000000000;
-  }*/
-
-  .hamburger-icon{
-    display: block;
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-    z-index: 900;
-    margin-top: 6px;
-    margin-right: 18px;
-  }
-
-  .ham-line{
-    height: 5px;
-    width: 35px;
-    background-color: white;
-    margin: 5px;
-  }
-
-  .cross{
-    position: absolute;
-    background: none;
-    top: 0px;
-    right: 0;
-    padding: 7px 15px 0px 15px;
-    color: white;
-    border: 0;
-    font-size: 5.5em;
-    line-height: 65px;
-    font-weight: bold;
-    cursor: pointer;
-    outline: none;
-    margin-right: 15px;
-    z-index: 10000000000000;
-  }
-
-  .glyphicon-home{
-    color:white;
-    font-size:1.5em;
-    margin-top:5px;
-    margin:0 auto;
-  }
-
-  .small-nav {
-    background-color: rgba(0, 114, 188, .85);
-    display: block;
-    height: 350px;
-    width: 100%;
-    padding-top: 35px;
-  }
-
-  .nav-btn-small {
-    display: flex;
-    flex-direction: column;
-    font-size: 25px;
-    height: 300px;
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    width: 100%;
-  }
-
-}
 
 /* ================================================================*/
         /* STUDENT DIRECTORY STYLES*/
@@ -480,26 +394,29 @@ aside{
 .tab{
   text-transform: uppercase;
   overflow-wrap: break-word;
-  max-width: 1.5em;
-  padding-top: .2em;
-  padding-right: .2em;
-  padding-bottom: .3em;
-  padding-left: .2em;
+  max-width: 3em;
+  padding-top: .5em;
+  padding-right: .75em;
+  padding-bottom: .5em;
+  padding-left: .5em;
   height: auto;
-  background-color: #0072bc;
+  background-color: #EB3C27;
   opacity: 85%;
   text-align: center;
   border-radius: 0 6px 6px 0;
 }
 
-.tab a h2{
+.tab a{
   margin: 0;
+  font-size: 2em;
+  text-align: center;
   line-height: 1.1em;
   color: #FFF;
 }
 
 .tab i {
   color: #FFF;
+  font-size: 2em;
 }
 
 #slide-out a{
@@ -528,7 +445,7 @@ aside{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;margin-top: 2em;
 }
 
 .blurb{
@@ -536,7 +453,12 @@ aside{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex;
+  padding: 3em;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+-moz-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
 }
 
 .instructor-img{
@@ -546,7 +468,7 @@ aside{
   min-width: 175px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid #444444;
+  border: 1px solid #B8B8B8;
 }
 
 .instructor-img img{
@@ -565,27 +487,43 @@ aside{
   text-align: left;
 }
 
-
-@media screen and (max-width: 800px) {
-
-  .instructor-blurbs{
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-}
-
 /* ================================================================*/
         /* PROFILE STYLES*/
 /* ================================================================*/
+
+.profile-main{
+  margin:  5% 10%;
+  padding: 2em;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+  -moz-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+  box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.about-me{
+  justify-self: center;
+}
+
+.about-me div{
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
 
 .about{
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 10%;
+
+}
+
+.about-text{
+  border-bottom: 1px solid #B8B8B8;
+  padding-top: 20px;
+
 }
 
 .about-me h2 {
@@ -594,6 +532,8 @@ aside{
 
 .student-title{
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .ccc {
@@ -610,6 +550,19 @@ aside{
  .headshot {
   width: 300px;
   padding: 0 30px 30px 0;
+  margin: 0 auto;
+ }
+
+ .skills{
+   padding: .75em 2em;
+   border-bottom: none;
+ }
+
+ .profile-header{
+   padding-bottom: 2em;
+   border-bottom: 1px solid #B4b4b4;
+   display: flex;
+   flex-direction: column;
  }
 
 
@@ -661,6 +614,11 @@ aside{
   max-width: 100%;
 }
 
+.project-detail{
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .about .btn {
   background-color: #ccc;
   margin-top: 30px;
@@ -692,15 +650,15 @@ header{
   display: block;
 }
 
- @media screen and (max-width: 380px){
+ @media screen and (max-width: 750px){
 .headshot {
   width: 100%;
   padding: 0 0px 30px 0;
+  margin: 0 auto;
  }
 .about-text{
   width: 100%;
   margin: 0;
-  padding: 0;
   margin-left: 0;
   font-size: 90%;
 }
@@ -711,7 +669,103 @@ header{
 
 .about {
   margin: 0;
-  padding: 0;
   flex-direction: column;
+  }
+
+  .instructor-blurbs{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blurb{
+    width: 80%;
+  }
+
+  .menu {
+    align-items: unset;
+    display: none;
+  }
+
+  .hamburger-icon{
+    display: block;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 900;
+    margin-top: 6px;
+    margin-right: 18px;
+  }
+
+  .ham-line{
+    height: 5px;
+    width: 35px;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .cross{
+    position: absolute;
+    background: none;
+    top: 0px;
+    right: 0;
+    padding: 7px 15px 0px 15px;
+    color: white;
+    border: 0;
+    font-size: 5.5em;
+    line-height: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin-right: 15px;
+    z-index: 10000000000000;
+  }
+
+  .glyphicon-home{
+    color:white;
+    font-size:1.5em;
+    margin-top:5px;
+    margin:0 auto;
+  }
+
+  .small-nav {
+    background-color: #54BAB4;
+    display: block;
+    height: 350px;
+    width: 100%;
+    padding-top: 35px;
+  }
+
+  .nav-btn-small {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+  }
+
+  .student-title h1{
+    text-align: center;
+  }
+  .student-title h2{
+    text-align: center;
+  }
+
+  .profile-main{
+    margin: 5%;
+  }
+
+  .content{
+    padding: 1em;
+  }
+
+  .profile-header{
+    justify-content: center;
+  }
+
+  .links{
+    justify-self: center;
   }
 }

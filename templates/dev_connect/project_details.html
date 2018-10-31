@@ -8,20 +8,24 @@
   {% if student.username == user.username and user.is_authenticated %}
   <a href="{% url 'edit_project' title=project.title%}"><button>Edit This Project</button></a>
   {% endif %}
-  <section>
+  <section class="project-detail">
     <h1>{{project.title}}</h1>
     <p>
       {{project.description}}
     </p>
+    <div class="project-tech">
+      <h3>
+        Tech Used:
+      </h3>
+      <p>
+        {{project.tech}}
+      </p>
+    </div>
   </section>
+
   <p>
     By {{project.teammates}}
   </p>
-  <h3>
-    Tech Used:
-  </h3>
-  <p>
-    {{project.tech}}
-  </p>
+
 </main>
 {% endblock %}

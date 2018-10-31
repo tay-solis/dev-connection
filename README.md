@@ -16,8 +16,9 @@ DEV CONNECTION is the best way for employers to get in touch with the students o
 Utilizing the Materialize UI design, our website is easy to navigate, image heavy, and mobile first. We make sure to include ample whitespace to provide a pleasing, tested user experience in collaboration with General Assembly's UI/UX bootcamp students.
 
 ## Wireframes and ERD
-[link to wireframe!](images/wireframe)
-[link to erd!](images/erd.jpg)
+[Wireframe(sketch)](https://drive.google.com/file/d/1rFJwvSwo27TdzOLeKJ_Z4lwNokpKCCoT/view?usp=sharing)
+[Wireframe(pdf)](https://drive.google.com/file/d/14pAWKGdYGuhlake04AenX7hy_EXVWuNC/view?usp=sharing)
+[Presentation](https://docs.google.com/presentation/d/1etLmVbFaJ5bxG46zbDQJSuraRb7yWA70FLQjjC-9sok/edit?usp=sharing)
 
 ## Technologies
 - Python3
