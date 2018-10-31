@@ -1,24 +1,20 @@
 console.log('We in da house!')
 
 $(document).ready(function(){
-   $('.sidenav').sidenav();
-   console.log('hello');
+  $('.sidenav').sidenav();
+  // console.log('hello');
 
-   $('#hamburger, #crossBtn, .menu-item').on('click', openCloseMobileNav);
+  $('#hamburger, #crossBtn, .menu-item').on('click', openCloseMobileNav);
 
-   function openCloseMobileNav() {
-     console.log('click...!')
-     $('#hamburger').toggleClass('hamburger-icon')
-     $('#crossBtn').toggleClass('hide');
-     // $('.#cross').toggleClass('show');
-     // $('.hamburger').removeClass('hamburger');
-     // $('#cross').toggleClass('hide');
-
+  function openCloseMobileNav() {
+    // console.log('click...!')
+    $('#hamburger').toggleClass('hamburger-icon')
+    $('#crossBtn').toggleClass('hide');
     $('nav').toggleClass('small-nav');
     $('.menu').toggleClass('nav-btn-small');
-   };
+  };
 
- });
+});
 
 
 // function openCloseMobileNav() {

@@ -293,8 +293,7 @@ input:focus {
         margin: 15px;
     }
     img {
-        width: 75%;
-        margin-top: 25px;
+        width: 100%;
     }
     .landing header {
         margin: 6% auto 0 auto;
@@ -478,13 +477,14 @@ aside{
 .tab{
   text-transform: uppercase;
   overflow-wrap: break-word;
-  max-width: 3em;
-  padding-top: 1.5em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-  padding-left: .5em;
+  max-width: 1.5em;
+  padding-top: .2em;
+  padding-right: .2em;
+  padding-bottom: .3em;
+  padding-left: .2em;
   height: auto;
   background-color: #0072bc;
+  opacity: 85%;
   text-align: center;
   border-radius: 0 6px 6px 0;
 }
@@ -579,7 +579,6 @@ aside{
 .about{
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: flex-end;
 }
 
