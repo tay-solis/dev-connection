@@ -36,7 +36,8 @@ section img{
 /*====TEXT STYLES===========*/
 
 body{
-  font-family: 'Nunito', sans-serif;
+  /*font-family: 'Nunito', sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
 }
 i{
   font-size: 3em;
@@ -47,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0;
   margin-bottom: 10px;
@@ -292,8 +293,7 @@ input:focus {
         margin: 15px;
     }
     img {
-        width: 75%;
-        margin-top: 25px;
+        width: 100%;
     }
     .landing header {
         margin: 6% auto 0 auto;
@@ -307,8 +307,7 @@ input:focus {
 /* ================================================================*/
         /* NAV BAR STYLES */
 /* ================================================================*/
-
-nav{
+.large-nav{
   width: 100%;
   position: fixed;
   top: 0;
@@ -317,35 +316,152 @@ nav{
   justify-content: space-between;
   align-items: center;
   background-color: #0072bc;
-  color: #cbd5db;
   padding: .5em;
 }
 
-nav ul{
+.menu{
   display: flex;
   flex-direction: row;
+  font-size: 16px;
+  color: #f4eb42;
+  margin-left: auto;
 }
 
-nav h1{
+nav li a{
+  color: #e3f4ff;
+  font-size: 20px;
+  /*transition: color 0.5s ease;*/
+}
+
+.greeting{
+  /*margin-right: 30px;*/
+  border-right: 2px solid #e3f4ff;
+  padding-right: 25px;
+}
+
+.hmBut{
+  color: #e3f4ff;
+  font-size: 35px;
   margin: 0;
-  color: #ffffff;
+  transition: color 0.5s ease;
 }
 
-nav a{
-  color: #cbd5db;
-  transiton: color .5s ease-in-out;
+.menu-item:hover{
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-nav a:hover{
-  color: #ffffff;
+nav .hmBut:hover{
+  box-sizing: border-box;
+  color: #f4eb42;
 }
-
-
 
 .bg-steel {
   background-color: #0072bc;
 }
 
+
+@media screen and (max-width: 1050px) {
+
+  .hmBut{
+    font-size: 30px;
+  }
+
+  nav li a, nav li .hmBut{
+    font-size: 16px;
+  }
+
+  .hmBut:hover{
+    font-size: 30px;
+  }
+
+}
+
+@media screen and (max-width: 770px) {
+
+  .menu {
+    align-items: unset;
+    display: none;
+  }
+
+  /*.hamburger-icon{
+    display: block;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 45px;
+    padding: 5px 15px 0px 15px;
+    color: #999;
+    border: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 10000000000000;
+  }*/
+
+  .hamburger-icon{
+    display: block;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    z-index: 900;
+    margin-top: 6px;
+    margin-right: 18px;
+  }
+
+  .ham-line{
+    height: 5px;
+    width: 35px;
+    background-color: white;
+    margin: 5px;
+  }
+
+  .cross{
+    position: absolute;
+    background: none;
+    top: 0px;
+    right: 0;
+    padding: 7px 15px 0px 15px;
+    color: white;
+    border: 0;
+    font-size: 5.5em;
+    line-height: 65px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin-right: 15px;
+    z-index: 10000000000000;
+  }
+
+  .glyphicon-home{
+    color:white; 
+    font-size:1.5em; 
+    margin-top:5px; 
+    margin:0 auto;
+  }
+
+  .small-nav {
+    background-color: rgba(0, 114, 188, .85);
+    display: block;
+    height: 350px;
+    width: 100%;
+    padding-top: 35px;
+  }
+
+  .nav-btn-small {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    width: 100%;
+  }
+
+}
 
 /* ================================================================*/
         /* STUDENT DIRECTORY STYLES*/
@@ -361,13 +477,14 @@ aside{
 .tab{
   text-transform: uppercase;
   overflow-wrap: break-word;
-  max-width: 3em;
-  padding-top: 1.5em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-  padding-left: .5em;
+  max-width: 1.5em;
+  padding-top: .2em;
+  padding-right: .2em;
+  padding-bottom: .3em;
+  padding-left: .2em;
   height: auto;
   background-color: #0072bc;
+  opacity: 85%;
   text-align: center;
   border-radius: 0 6px 6px 0;
 }
@@ -383,7 +500,7 @@ aside{
 }
 
 #slide-out a{
-  font-size: 2em;
+  font-size: 1em;
 }
 
 #slide-out h2{
@@ -420,8 +537,10 @@ aside{
 }
 
 .instructor-img{
-  width: 250px;
-  height: 250px;
+  /*width: 250px;
+  height: 250px;*/
+  width: 80%;
+  min-width: 175px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #444444;
@@ -429,7 +548,6 @@ aside{
 
 .instructor-img img{
   height: inherit;
-
 }
 
 .class{
@@ -445,6 +563,14 @@ aside{
 }
 
 
+@media screen and (max-width: 800px) {
+
+  .instructor-blurbs{
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    align-items: center;
+  }
+}
 
 /* ================================================================*/
         /* PROFILE STYLES*/
@@ -453,7 +579,6 @@ aside{
 .about{
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   align-items: flex-end;
 }
 
@@ -461,6 +586,7 @@ aside{
   width: 300px;
   height: 300px;
   overflow: hidden;
+  border-radius: 50%;
 }
 .headshot img{
   max-width: 100%;
@@ -501,4 +627,12 @@ header{
   height: 50vh;
   background-size: cover;
   background-position: center;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

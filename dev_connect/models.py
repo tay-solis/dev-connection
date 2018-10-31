@@ -15,7 +15,7 @@ class StudentProfile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     skills= models.TextField(blank=True)
     favorite_snack= models.CharField(max_length=50, blank=True)
-    dream_job= models.TextField()
+    dream_job= models.TextField(blank=True)
     favorite_tech= models.CharField(max_length=50, blank=True)
     hidden_talent = models.CharField(max_length=50, blank=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name = 'profile')
