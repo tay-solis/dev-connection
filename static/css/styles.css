@@ -615,6 +615,7 @@ box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
 }
 
 .project-detail{
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -648,6 +649,17 @@ header{
 
 .show {
   display: block;
+}
+
+.project-tech{
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+-moz-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
+padding: 3em;
+}
+
+.project-detail{
+  border-bottom: none;
 }
 
  @media screen and (max-width: 750px){
