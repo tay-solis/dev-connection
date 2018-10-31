@@ -567,9 +567,10 @@ aside{
 
   .instructor-blurbs{
     flex-direction: column;
-    /*justify-content: space-around;*/
     align-items: center;
   }
+
+ 
 }
 
 /* ================================================================*/
