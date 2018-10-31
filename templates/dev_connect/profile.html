@@ -4,43 +4,48 @@
 {% include 'partials/nav_bar.html' %}
 
 <main class="content">
-  {% if student.username == user.username and user.is_authenticated %}
-  <a href="{% url 'edit_profile' %}"><button>Edit My Profile</button></a>
-  {% endif %}
-  <div class="title">
-    <h1>{{ student.first_name}} {{student.last_name}}</h1>
-    <h2>{{ profile.tag_line }}</h2>
-  </div>
   <section class="about">
-    <div class="headshot">
-      <img src="{{profile.image.url}}" />
-    </div>
-    <div class="about-text">
-      <p>
-        My favorite snack is <span class="about-answer">{{profile.favorite_snack}}</span>
-      </p>
-      <p>
-        My dream job is <span class="about-answer">{{profile.dream_job}}</span>
-      </p>
-      <p>
-        I'm excited about <span class="about-answer">{{profile.favorite_tech}}</span>
-      </p>
-      <div class="skills">
-        <p>
-          {{profile.skills}}
-        </p>
-      </div>
-      <div class="links">
+
+  <div class="headshot">
+      <img src="{{profile.image.url}}" class="circle responsive-img" />
+  </div>
+
+    <div class="student-title">
+      <h1>{{ student.first_name}} {{student.last_name}}</h1>
+      <h2 class="ccc">"{{ profile.tag_line }}"</h2>
+
+  <div class="links">
         <ul>
           <li><a href="{{profile.github_link}}"><i class="fab fa-github-square"></i></a></li>
           <li><a href="{{profile.linkedin_link}}"><i class="fab fa-linkedin"></i></a></li>
           <li><a href="{{profile.website_link}}"><i class="fas fa-globe"></i></a></li>
         </ul>
-
+          {% if student.username == user.username and user.is_authenticated %}
+   <a class="waves-effect waves-light btn" href="{% url 'edit_profile' %}"><i class="material-icons left far fa-edit"></i>Edit Profile</a>
+  <!-- <a href="{% url 'edit_profile' %}"><button>Edit My Profile</button></a> -->
+  {% endif %}
       </div>
     </div>
+  </div>
+</section>
 
-  </section>
+<section class="about-me">
+  <h2>A Bit More About Me</h2>
+
+  <div class="about-text">
+
+      <h3>My favorite snack is: <span class="about-answer">{{profile.favorite_snack}}</span></h3>
+      <h3>My dream job is: <span class="about-answer">{{profile.dream_job}}</span></h3>
+      <h3>I'm excited about: <span class="about-answer">{{profile.favorite_tech}}</span></h3>
+
+      <div class="skills">
+        <h3>
+          {{profile.skills}}
+        </h3>
+      </div>
+</section>
+
+
   <section class="projects">
     {% for project in projects %}
 
