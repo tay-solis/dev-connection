@@ -15,7 +15,7 @@ def student_profile(request, username):
     student = get_object_or_404(User, username=username)
     profile = get_object_or_404(StudentProfile, user_id=student.id)
     projects = Project.objects.filter(user_id=student.id)
-    return render(request, 'dev_connect/profile.html', {'student': student, 'profile': profile, 'projects': projects})
+    return render(request, 'dev_connect/profile.html', {'student': student, 'profile': profile, 'projects': projects, 'students': students})
 
 def project_details(request, username, title):
     student = get_object_or_404(User, username=username)
@@ -67,4 +67,3 @@ def edit_project(request, title):
     else:
         form = ProjectForm(instance=project)
         return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
-
