@@ -32,7 +32,7 @@ def edit_profile(request):
     profile = StudentProfile.objects.get(user_id = request.user)
     projects = Project.objects.filter(user_id=student.id)
     if request.method == 'POST':
-        form = StudentProfileForm(request.POST, instance = profile)
+        form = StudentProfileForm(request.POST, request.FILES, instance = profile)
         if form.is_valid():
             edited_profile = form.save()
             return render(request, 'dev_connect/profile.html', {'student': student, 'profile': profile, 'projects': projects})
@@ -45,7 +45,7 @@ def edit_profile(request):
 def add_project(request):
     student = request.user
     if request.method == 'POST':
-        form = ProjectForm(request.POST)
+        form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             project = form.save(commit=False)
             project.user_id = student
@@ -60,10 +60,11 @@ def edit_project(request, title):
     student = request.user
     project = get_object_or_404(Project, title=title)
     if request.method == 'POST':
-        form = ProjectForm(request.POST, instance = project)
+        form = ProjectForm(request.POST, request.FILES, instance = project)
         if form.is_valid():
             edited_project = form.save()
             return render(request, 'dev_connect/project_details.html', {'student': student, 'project': project})
     else:
         form = ProjectForm(instance=project)
         return render(request, 'dev_connect/editproject.html', {'form': form, 'project': project})
+
