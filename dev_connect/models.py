@@ -37,7 +37,7 @@ class Project(models.Model):
     title= models.CharField(max_length=50)
     hosted_link = models.CharField(max_length=50)
     github_link = models.CharField(max_length=50)
-    screenshot= models.ImageField(upload_to='projects', blank=True)
+    screenshot= models.ImageField(default='default2.jpg', upload_to='projects', blank=True)
     description= models.TextField()
     tech = models.TextField()
     teammates = models.TextField()
@@ -52,4 +52,3 @@ class Project(models.Model):
     #         output_size = (300,300)
     #         img.thumbnail(output_size)
     #         img.save(self.image.path)
-

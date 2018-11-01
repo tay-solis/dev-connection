@@ -3,7 +3,6 @@
 Red: #EB3C27
 Off White: #FDFCFC
 Dark Blue #29375C
-Dark grey: #5C708;
 Blue: #0072bc;
 Grey: #B8B8B8;
 Teal: #54BAB4;
@@ -31,6 +30,7 @@ body{
 }
 
 section{
+  margin-top: 2em;
   padding-bottom: 3em;
   border-bottom: 1px solid #B8B8B8;
 }
@@ -60,20 +60,24 @@ i{
   font-size: 3em;
 }
 
+a{
+  color: #54BAB4;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #54BAB4;
   font-weight: normal;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 h1 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 3em;
+  color: #282623;
+  font-size: 2.25em;
+
 }
 
 h2 {
-  margin: 0;
-  margin-bottom: 10px;
   font-size: 2em;
 }
 
@@ -83,7 +87,7 @@ h3 {
 
 h4 {
   letter-spacing: -.01em;
-  background-color: #0072bc;
+  background-color: #54BAB4;
   width: 100%;
   color: #fff;
   padding: 20px 0 20px 40px;
@@ -172,13 +176,10 @@ input:focus {
 .button {
   font-weight: 800;
   margin: 20px auto;
-  width: 100%;
   font-size: 16px;
   border-radius: 4px;
   background-color: #B8B8B8;
   transition: color .75s ease-in-out;
-  /*height: 42px;*/
-  /*min-width: 250px;*/
   color: #fff;
   text-align: center;
   border: none;
@@ -219,13 +220,11 @@ input:focus {
     padding: 0 auto;
 }
 
-.landing footer {
+footer {
+  width: 100%;
     text-align: center;
     margin: 0 auto;
-    padding-top: 0;
-    /*position: absolute;
-    bottom: 0;
-    left: auto;*/
+    padding: 3em;
 }
 
 .landing h1 {
@@ -265,7 +264,7 @@ input:focus {
 .landing .btn-landing:hover {
     background-color: rgba(204,204,204, 0.05);
     color: rgba(204,204,204, 0.85);
-    border: 3px solid teal;
+    border: 3px solid #54BAB4;
     /*filter: drop-shadow(0px 1px 3px rgba(204,204,204, 0.25));*/
 }
 
@@ -460,18 +459,21 @@ aside{
 -moz-box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
 box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
 }
+.blurb h3{
+    font-size: 1.6em;
+  }
+
 
 .instructor-img{
-  /*width: 250px;
-  height: 250px;*/
-  width: 80%;
-  min-width: 175px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid #B8B8B8;
 }
 
 .instructor-img img{
+  width:inherit;
   height: inherit;
 }
 
@@ -562,26 +564,28 @@ box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
    padding-bottom: 2em;
    border-bottom: 1px solid #B4b4b4;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
  }
 
+.card-content h3{
+  font-size: 1.5em;
+  color: #282623;
+}
 
-
-/*.headshot{
+#project-link{
+  color: #EB3C27;
+}
+.headshot{
   width: 300px;
   height: 300px;
   overflow: hidden;
   border-radius: 50%;
 }
-.headshot img{
-  max-width: 100%;
-  overflow: hidden;
-  min-width: 300px;
-  min-height: 100%;
-}*/
+
 .about-text{
   width: 100%;
-  margin-left: 20px;
   padding: .75em 2em;
 }
 
@@ -603,6 +607,7 @@ box-shadow: 2px 2px 2px 2px rgba(184,184,184,0.67);
 .projects{
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -688,7 +693,6 @@ padding: 3em;
     flex-direction: column;
     align-items: center;
   }
-
   .blurb{
     width: 80%;
   }
@@ -713,6 +717,7 @@ padding: 3em;
     width: 35px;
     background-color: white;
     margin: 5px;
+    border-radius: 3px;
   }
 
   .cross{
@@ -775,9 +780,15 @@ padding: 3em;
 
   .profile-header{
     justify-content: center;
+    flex-direction: column;
+  }
+
+  .profile-header h1{
+    margin-top: 10px;
   }
 
   .links{
     justify-self: center;
   }
+
 }
